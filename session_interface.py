@@ -3,7 +3,7 @@ import uuid
 import json
 from itsdangerous import Signer, BadSignature, want_bytes
 
-
+#kütüphaneleri import ettik
 class MySession(dict, SessionMixin):
       def __init__(self, initial=None, sessionId = None):
             self.initial = initial
