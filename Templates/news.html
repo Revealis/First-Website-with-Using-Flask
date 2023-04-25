@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block body_content %}
+
+	<div id="contents">
+		<div class="main">
+			<h1>Haberler</h1>
+			<ul class="news">
+				<li>
+					<div class="date">
+						<p>
+							<span>25</span>
+							nisan
+						</p>
+					</div>
+					<h2>Bill Gates: Yapay zeka 18 ay içinde çocuklara okumayı öğretmeye başlayacak <span>Mehmetcan ANGÜN</span></h2>
+					<p>
+						Microsoft'un kurucusu Bill Gates, yapay zeka tabanlı sohbet robotlarının önümüzdeki 18 ay içinde çocukların eğitiminde önemli bir rol oynayabileceğini düşünüyor. Gates'e göre OpenAI ChatGPT ve Google Bard gibi hizmetler yakında insan öğretmenlerle eşit seviyede okuma ve yazma öğretebilecek. <span><a href="{{ url_for('dahafazla') }}" class="more">Daha fazla</a></span>
+					</p>
+				</li>
+				<li>
+					<div class="date">
+						<p>
+							<span>24</span>
+							mart
+						</p>
+					</div>
+					<h2>Elektrikli otomobillerin kritik batarya bileşeni yerlileştirildi <span>Mehmetcan ANGÜN</span></h2>
+					<p>
+						Elektrikli otomobillerin en önemli bileşeni hiç şüphesiz ki sahip oldukları bataryalar. Ancak bu bataryaların fizik ve kimyanın bir getirisi olarak bazı dezavantajları bulunuyor. Mevcut lityum iyon bataryaların sıcaklık konusunda hassasiyeti bulunuyor ve buna bağlı olarak performanslarını kaybedebiliyorlar. Bunun önüne geçilmesi için tasarlanan bir batarya ekipmanı Nanografi AŞ tarafından yerlileştirildi. <span><a href="{{ url_for('dahafazla') }}" class="more">Daha fazla</a></span>
+					</p>
+				</li>
+				<li>
+					<div class="date">
+						<p>
+							<span>15</span>
+							mart
+						</p>
+					</div>
+					<h2>ChatGPT en büyük rekabeti Çin’den görecek <span>Mehmetcan ANGÜN</span></h2>
+					<p>
+						Üretken yapay zekâ konusunda Pekin Yapay Zekâ Akademisi öne çıkan en önemli kurum durumunda. Ambargo altında olsa da Çin yapay zekâ çalışmalarına çok önce başlamıştı ve krizden en az etkilenmek için devlet var gücüyle şirketleri destekliyor. <span><a href="{{ url_for('dahafazla') }}" class="more">Daha fazla</a></span>
+					</p>
+				</li>
+			</ul>
+		</div>
+		<div class="sidebar">
+			<h1>En Çok Okunanlar</h1>
+			<ul class="posts">
+				<li>
+					<h4 class="title"><a href="post.html">Yapay zeka ve çocuklar</a></h4>
+					<p>
+						Microsoft'un kurucusu Bill Gates, yapay zeka tabanlı sohbet robotlarının önümüzdeki 18 ay içinde çocukların eğitiminde önemli bir rol oynayabileceğini düşünüyor.
+					</p>
+				</li>
+				<li>
+					<h4 class="title"><a href="post.html">Elektirkli otomobil bataryaları</a></h4>
+					<p>
+						Elektrikli otomobillerin en önemli bileşeni hiç şüphesiz ki sahip oldukları bataryalar. Ancak bu bataryaların fizik ve kimyanın bir getirisi olarak bazı dezavantajları bulunuyor.
+					</p>
+				</li>
+				<li>
+					<h4 class="title"><a href="post.html">Çin ve ChatGPT</a></h4>
+					<p>
+						Üretken yapay zekâ konusunda Pekin Yapay Zekâ Akademisi öne çıkan en önemli kurum durumunda. Ambargo altında olsa da Çin yapay zekâ çalışmalarına çok önce başlamıştı ve krizden en az etkilenmek için devlet var gücüyle şirketleri destekliyor.
+					</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block body_content %}
+
+<div id="contents" xmlns="http://www.w3.org/1999/html">
+		<div class="section">
+			<h1>İletişim</h1>
+			<p>
+				Görüş ve önerileriniz bizim için değerlidir!Amacımız size her zaman daha iyi hizmet verebilmektir. Bu nedenle görüş ve önerilerinize çok değer veriyor; ürün ve hizmetlerimizi geliştirmeye yönelik çalışmalarımızda titizlikle değerlendiriyoruz.Bizimle paylaşmak istediğiniz görüş, öneri ya da şikayetiniz varsa ilgili "İletişim Formu"nu doldurarak bize iletebilirsiniz. Bildiriminizi en kısa sürede değerlendirip size geri döneceğiz.
+			</p>
+			<form action="index.html" method="post" class="message">
+				<input type="text" value="Adınız" onFocus="this.select();" onMouseOut="javascript:return false;"/>
+				<input type="text" value="Mail" onFocus="this.select();" onMouseOut="javascript:return false;"/>
+				<input type="text" value="Konu" onFocus="this.select();" onMouseOut="javascript:return false;"/>
+				<textarea></textarea>
+				<input type="submit" value="Gönder">
+			</form>
+		</div>
+		<div class="section contact">
+			<p>
+				Sorularınız İçin Lütfen Arayın: <span>555-555-5555</span>
+			</p>
+			<p>
+				Veya bizi şu adresten ziyaret edebilirsiniz: <span>ANGÜN CORP.<br> 8790/15 sokak İzmir 36650</span>
+			</p>
+		</div>
+	</div>
+
+{% endblock %}
