@@ -2,7 +2,7 @@ from flask import Flask,render_template,redirect,url_for,request,session,abort
 from .session_interface import MySessionInterface
 app = Flask(__name__)
 app.secret_key = b"?051kjajshdsd__"  #verileri imzaladıktan sonra şifrelemek için kullandık
-app.session_interface = MySessionInterface()
+app.session_interface = MySessionInterface() #kendi interfaceimizi belirttik
 #kütüphaneleri import ettik ve
 def get_current_username():
       Email = ""
