@@ -15,7 +15,7 @@ class MySession(dict, SessionMixin):
             return super(MySession,self).__getitem__(item)
       def __delitem__(self, key):
             super(MySession, self).__delitem__(key)
-
+#sessionlarımızı oluşturduk
 class MySessionInterface(SessionInterface):
       session_class = MySession
       salt = 'my-session'
@@ -28,7 +28,7 @@ class MySessionInterface(SessionInterface):
             signedSessionId = request.cookies.get(app.session_cookie_name)
             if not signedSessionId:
                   sessionId = str(uuid.uuid4())
-                  return self.session_class(sessionId=sessionId)
+                  return self.session_class(sessionId=sessionId)         #ıd yoksa oluştursun varsa olana dönsün
             signer = Signer(app.secret_key, salt=self.salt, key_derivation='hmac')
             try:
                   sessionId = signer.unsign(signedSessionId).decode()
@@ -40,7 +40,7 @@ class MySessionInterface(SessionInterface):
             try:
                   initialSessionValue = json.loads(initialSessionValueAsJson)
             except:
-                  sessionId = str(uuid.uuid4())
+                  sessionId = str(uuid.uuid4())  #sessionıd nin şifreleme kütüphanesidir daha güvenli.
                   return self.session_class(sessionId=sessionId)
             return self.session_class(initialSessionValue, sessionId=sessionId)
 
@@ -51,7 +51,7 @@ class MySessionInterface(SessionInterface):
             signedSessionId = signer.sign(want_bytes(session.sessionId))
             response.set_cookie(app.session_cookie_name, signedSessionId)
 #, key_derivation='hmac'
-
+#iki definition la sessionların kontrolünü sağlıyoruz.
 
 
 
