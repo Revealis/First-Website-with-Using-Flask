@@ -20,12 +20,12 @@
 					<a href="{{ url_for('avantajlar') }}">Avantajlar</a>
 				</li>
 				<li>
-					<a href="{{ url_for('haberler') }}">Haberler</a>
+					<a href="{{ url_for('haberler') }}">Haberler</a>      <!--basıldığında sayfalara yönlendirme işlemi-->
 				</li>
 				<li>
 					<a href="{{ url_for('iletisim') }}">İletişim</a>
 				</li>
-				{% if login_auth == False %}
+				{% if login_auth == False %}  <!-- eğer giriş yanlış veya doğru ise ne olur-->
 				<li>
 					<a href="{{ url_for('giris') }}">Giriş</a>
 				</li>
@@ -38,9 +38,9 @@
 		</div>
 	</div>
 
-	{% block body_content %}
+	{% block body_content %}    <!--base html in arasında olacak body kısmının başlangıcını  belirler-->
 
-	{% endblock %}
+	{% endblock %}      <!-- bitişini belirler-->
 
 	<div id="footer">
 		<div class="clearfix">
@@ -53,3 +53,5 @@
 		</div>
 	</div>
 </body>
+	
+<!--base html ile her sayfa geçişinde sabit olacak ve sürekli sayfalara aynı kodu eklememize gerek kalmayacak bir html sayfası oluşturduk.-->
